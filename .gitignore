@@ -1,0 +1,6 @@
+.vscode
+CMakeFiles
+cmake_install*
+CMakeCache*
+Makefile
+merge
