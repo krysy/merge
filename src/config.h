@@ -1,2 +1,2 @@
-#define ARR_SIZE 9
+#define ARR_SIZE 5
 #define ARR_MAX_NUMBER 128
