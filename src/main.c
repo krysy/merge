@@ -91,9 +91,11 @@ int main(int argc, char *argv[]){
 		for (int i = 0; i < merged->size; i++) {
 			listPrint(listGetPointer(merged, i));
 		}
+      
 		free(previousMerged);
     	previousMerged = merged;
     }
+    fprintf(stderr, "Total iterations: %i\n", totalIterations);
 
     return 0;
 }

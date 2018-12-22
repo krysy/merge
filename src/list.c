@@ -12,6 +12,7 @@ void listTrim(List* lst){
             memmove(&lst->items[i], &lst->items[i+1], sizeof(ListItem) * lst->size - i);
             lst->size -= 1;
             lst->items = realloc(lst->items, sizeof(ListItem) * lst->size);
+            break;
         }        
     }
 } 
