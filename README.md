@@ -1,6 +1,11 @@
 # About
 This is my attempt at creating an implemenation of the mergesort algorithm.
 
+# Compiling
+```
+$ cmake .
+$ make
+```
 # Example
 ```
 [ 66, 100, 50, 90, 117 ]
