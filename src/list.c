@@ -12,14 +12,16 @@ void listTrim(List* lst){
             memmove(&lst->items[i], &lst->items[i+1], sizeof(ListItem) * lst->size - i);
             lst->size -= 1;
             lst->items = realloc(lst->items, sizeof(ListItem) * lst->size);
-            break;
+            break; // massive performance gains from this
         }        
     }
 } 
 
 void listRemoveAt(List* lst, unsigned int index){
     lst->items[index].exists = FALSE;
-    listTrim(lst);
+    memmove(&lst->items[index], &lst->items[index+1], sizeof(ListItem) * lst->size - index);
+    lst->size -= 1;
+    lst->items = realloc(lst->items, sizeof(ListItem) * lst->size);
 }
 
 void listAddPointer(List* lst, void* obj){

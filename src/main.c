@@ -80,6 +80,8 @@ int main(int argc, char *argv[]){
 				break;
 			}
 			listAddPointer(merged, merge(listGetPointer(previousMerged, 0), listGetPointer(previousMerged, 1)));
+
+            //this is ugly
 			if (returnedItems == 2) {
 				listRemoveAt(previousMerged, 0);
 				listRemoveAt(previousMerged, 0);
